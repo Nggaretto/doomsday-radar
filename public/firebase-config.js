@@ -1,13 +1,10 @@
-// ===== حط بيانات مشروع Firebase بتاعك هنا =====
-// Firebase Console > Project settings > General > Your apps > Web app > Config
 self.FIREBASE_CONFIG = {
-  apiKey: 'PASTE_API_KEY',
-  authDomain: 'PASTE_PROJECT_ID.firebaseapp.com',
-  projectId: 'PASTE_PROJECT_ID',
-  storageBucket: 'PASTE_PROJECT_ID.appspot.com',
-  messagingSenderId: 'PASTE_SENDER_ID',
-  appId: 'PASTE_APP_ID',
+  apiKey: 'AIzaSyCBdzicLsnE9jiVWpRfoOoTrFrYpD5LXH8',
+  authDomain: 'doomsday-radar.firebaseapp.com',
+  projectId: 'doomsday-radar',
+  storageBucket: 'doomsday-radar.firebasestorage.app',
+  messagingSenderId: '840979626255',
+  appId: '1:840979626255:web:1f382f75d7f7405ba1a67a',
 };
 
-// Firebase Console > Project settings > Cloud Messaging > Web Push certificates > Generate key pair
-self.VAPID_KEY = 'PASTE_VAPID_PUBLIC_KEY';
+self.VAPID_KEY = 'BK6tlR2ingiRxaiZbVKvbeU39lrk2qPtlkzjApnt1lZiy03P5x6n-2B1dbTH8de2MlVSoukwF0FyCVWVau9VLiE';

@@ -15,7 +15,6 @@ function loadCredential() {
 
 if (!admin.apps.length) admin.initializeApp({ credential: admin.credential.cert(loadCredential()) });
 
-// لازم يكون نفس اسم الداتابيز اللي التطبيق بيقرا منه (app.js: getFirestore(app, 'default'))
 const DB_ID = process.env.FIRESTORE_DB || 'default';
 const db = getFirestore(admin.app(), DB_ID);
 console.log('🗄️  Firestore database:', DB_ID);
