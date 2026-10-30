@@ -41,7 +41,7 @@ main{max-width:1040px;margin:0 auto;padding:16px 14px 20px;display:grid;gap:16px
 
 /* الهيرو */
 .hero{position:relative;min-height:300px;border-radius:28px;overflow:hidden;border:1px solid var(--line);isolation:isolate;direction:ltr;padding:20px;display:flex;flex-direction:column;justify-content:space-between}
-.hero-art{position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(5,10,31,.92) 0%,rgba(5,10,31,.2) 60%,rgba(5,10,31,.55) 100%),url(/hero.jpg) center/cover no-repeat,radial-gradient(260px 260px at 60% 30%,rgba(109,255,176,.3),transparent 70%),radial-gradient(420px 320px at 20% 20%,rgba(67,97,255,.55),transparent 70%),radial-gradient(500px 300px at 60% 90%,rgba(255,45,85,.28),transparent 70%),linear-gradient(135deg,#0a1236,#1a1f6b 55%,#0a1236)}
+.hero-art{position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(5,10,31,.88) 0%,rgba(5,10,31,.1) 55%,rgba(5,10,31,.5) 100%),url(/hero.jpg) center 30%/cover no-repeat,radial-gradient(260px 260px at 60% 30%,rgba(109,255,176,.3),transparent 70%),radial-gradient(420px 320px at 20% 20%,rgba(67,97,255,.55),transparent 70%),radial-gradient(500px 300px at 60% 90%,rgba(255,45,85,.28),transparent 70%),linear-gradient(135deg,#0a1236,#1a1f6b 55%,#0a1236)}
 .slogan{margin:0;align-self:flex-end;text-align:right;font:italic 500 clamp(17px,4.6vw,26px)/1.35 'Poppins',sans-serif;color:#dfe7ff}
 .hero-copy{max-width:70%}
 h1{margin:0;line-height:.9;font-family:'Poppins',sans-serif;font-weight:800;display:grid;text-align:left}

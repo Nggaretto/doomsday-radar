@@ -134,9 +134,8 @@ $('alarmStop').onclick = () => {
 $('btnWake').onclick = toggleWake;
 
 if (!configured) {
-  $('setup').hidden = false;
-  $('statusText').textContent = 'محتاج إعداد Firebase';
-  $('statusSub').textContent = 'اتبع خطوات الـ README';
+  $('statusText').textContent = 'البوت مش متصل';
+  $('statusSub').textContent = '';
   $('btnEnable').disabled = true;
 } else {
   init();
