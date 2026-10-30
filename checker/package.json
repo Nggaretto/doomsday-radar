@@ -1,0 +1,23 @@
+{
+  "name": "galaxy-tanta-doomsday-checker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Watches Galaxy Cinema Tanta for Avengers: Doomsday booking, pushes loud alerts, suggests & books best 3 adjacent seats",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "debug": "node index.js --debug --once",
+    "once": "node index.js --once",
+    "test-push": "node test-push.js",
+    "test-seats": "node seats.test.js"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.5",
+    "firebase-admin": "^12.6.0"
+  },
+  "optionalDependencies": {
+    "playwright": "^1.48.0"
+  }
+}

@@ -1,0 +1,23 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // حالة البوت: الكل يقرا، والتطبيق يقدر يغيّر "ack" بس (تمام شفت)
+    match /state/{doc} {
+      allow read: if true;
+      allow update: if request.resource.data.diff(resource.data).affectedKeys().hasOnly(['ack']);
+    }
+
+    // أجهزة الإشعارات: التطبيق يسجّل جهازه بس (مفيش قراءة)
+    match /tokens/{token} {
+      allow create, update: if request.resource.data.keys().hasOnly(['createdAt', 'ua']);
+    }
+
+    // طلبات الحجز من التطبيق
+    match /bookRequests/{id} {
+      allow read: if true;
+      allow create: if request.resource.data.status == 'pending'
+                    && request.resource.data.seats.size() <= 10;
+    }
+  }
+}

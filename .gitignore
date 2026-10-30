@@ -1,0 +1,4 @@
+node_modules/
+checker/.env
+checker/serviceAccountKey.json
+checker/debug/

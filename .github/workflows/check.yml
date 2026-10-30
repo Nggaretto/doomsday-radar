@@ -1,0 +1,31 @@
+name: Doomsday Watch
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'   # كل 5 دقايق (أقل مدة بيسمح بيها GitHub)
+  workflow_dispatch:         # تشغيل يدوي من تاب Actions
+
+concurrency:
+  group: doomsday-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install
+        working-directory: checker
+        run: npm install --omit=optional --no-audit --no-fund
+      - name: Check once
+        working-directory: checker
+        run: node index.js --once
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          FIRESTORE_DB: default
+          POLL_SECONDS: '300'
+          AUTO_BOOK: 'false'

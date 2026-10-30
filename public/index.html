@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>CinemaBot — Doomsday Watch</title>
+  <meta name="theme-color" content="#050a1f" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" href="/icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="CinemaBot" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Poppins:ital,wght@0,600;0,800;1,500&family=Caveat:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="bw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#c7d3ff"/></linearGradient>
+      <linearGradient id="bb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6d8bff"/><stop offset="1" stop-color="#2b3fd6"/></linearGradient>
+    </defs>
+    <symbol id="bot" viewBox="0 0 200 220">
+      <line x1="100" y1="36" x2="100" y2="20" stroke="#9db4ff" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="100" cy="14" r="8" fill="#35e6ff"/>
+      <circle cx="32" cy="84" r="13" fill="url(#bb)"/><circle cx="168" cy="84" r="13" fill="url(#bb)"/>
+      <rect x="40" y="36" width="120" height="94" rx="44" fill="url(#bw)"/>
+      <rect x="54" y="52" width="92" height="60" rx="28" fill="#0a1236"/>
+      <circle cx="80" cy="80" r="10" fill="#35e6ff"/><circle cx="120" cy="80" r="10" fill="#35e6ff"/>
+      <circle cx="83" cy="77" r="3.5" fill="#fff"/><circle cx="123" cy="77" r="3.5" fill="#fff"/>
+      <path d="M88 98q12 9 24 0" stroke="#35e6ff" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <rect x="64" y="132" width="72" height="62" rx="28" fill="url(#bw)"/>
+      <circle cx="100" cy="160" r="9" fill="#35e6ff"/><circle cx="100" cy="160" r="4" fill="#fff"/>
+      <circle cx="56" cy="164" r="13" fill="url(#bw)"/>
+      <path d="M116 150h60l-8 52h-44z" fill="#fff"/>
+      <path d="M116 150h10L131.3 202H124z" fill="#ff2d55"/>
+      <path d="M136 150h10L146 202H138.7z" fill="#ff2d55"/>
+      <path d="M156 150h10L160.7 202H153.3z" fill="#ff2d55"/>
+      <g fill="#fff3c4"><circle cx="128" cy="146" r="9"/><circle cx="146" cy="140" r="10"/><circle cx="164" cy="146" r="9"/><circle cx="137" cy="135" r="8"/><circle cx="156" cy="134" r="8"/></g>
+      <g fill="#ffd36b"><circle cx="124" cy="143" r="3"/><circle cx="150" cy="136" r="3"/><circle cx="166" cy="143" r="3"/></g>
+    </symbol>
+    <symbol id="i-film" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M3 15h18M8 4v16M16 4v16"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 9a6 6 0 0112 0c0 6 2 7 2 7H4s2-1 2-7"/><path d="M10 20a2 2 0 004 0"/></symbol>
+    <symbol id="i-seat" viewBox="0 0 24 24"><path d="M7 11V6a3 3 0 013-3h4a3 3 0 013 3v5"/><path d="M5 11h14v6a2 2 0 01-2 2H7a2 2 0 01-2-2z"/><path d="M8 19v2M16 19v2"/></symbol>
+    <symbol id="i-ticket" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M14 6v12" stroke-dasharray="2 2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 9a4 4 0 010 6M18.5 6.5a8 8 0 010 11"/></symbol>
+    <symbol id="i-dl" viewBox="0 0 24 24"><path d="M12 3v12M7 11l5 5 5-5M5 20h14"/></symbol>
+  </svg>
+
+  <!-- شاشة التحميل -->
+  <div id="splash" class="splash">
+    <svg class="splash-bot"><use href="#bot"/></svg>
+    <b class="logo">Cinema<span>Bot</span></b>
+    <p>Your Movie Booking Assistant</p>
+    <small>Find the best seats.<br />Get the best experience.</small>
+    <div class="load"><i></i></div>
+  </div>
+
+  <div class="stars" aria-hidden="true"></div>
+
+  <header class="top">
+    <div class="brand">
+      <svg class="brand-bot"><use href="#bot"/></svg>
+      <div><b>Cinema<span>Bot</span></b><small>Your Movie Booking Assistant</small></div>
+    </div>
+    <div id="heartbeat" class="pill off"><i></i><span>البوت مش متصل</span></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-art"></div>
+      <p class="slogan">Less Searching.<br />More Watching.</p>
+      <div class="hero-copy">
+        <h1><span class="a">AVENGERS</span><span class="b">DOOMSDAY</span></h1>
+      </div>
+      <p class="ready">Your next movie<br />is ready!</p>
+      <svg class="hero-bot"><use href="#bot"/></svg>
+    </section>
+
+    <!-- كارت الفيلم -->
+    <section class="card movie">
+      <div class="genres"><span>Action</span><span>Adventure</span><span>Sci-Fi</span><span>2h 48m</span><span>PG-13</span></div>
+      <div class="notify">
+        <svg class="ic"><use href="#i-bell"/></svg>
+        <div><small>التذاكر هتتاح قريباً</small><b>🎬 جلاكسي طنطا · مول طنطا</b></div>
+        <button id="btnNotifyTop" data-notify class="btn primary small">نبّهني</button>
+      </div>
+    </section>
+
+    <div class="layout">
+      <div class="col">
+        <section class="card hello">
+          <div class="bubble-row">
+            <svg class="mini-bot"><use href="#bot"/></svg>
+            <div class="bubble">
+              <b>أهلاً! 👋</b>
+              <p>أنا <b>CinemaBot</b>، مساعدك الذكي لحجز الأفلام. هراقب <b>Avengers: Doomsday</b> وأول ما الحجز يفتح هرنّلك وأختارلك أفضل <b>٣ أماكن متجاورة</b>.</p>
+            </div>
+          </div>
+          <div class="actions">
+            <button id="btnInstall" class="btn primary wide" hidden><svg class="ic"><use href="#i-dl"/></svg> نزّل التطبيق</button>
+            <button id="btnEnable" data-notify class="btn primary wide">🔔 فعّل الإشعارات</button>
+          </div>
+          <p class="hint">وكن أول من يحجز تذاكر الفيلم فور نزوله!</p>
+          <p id="iosHint" class="hint" hidden>على الآيفون: دوس زرار المشاركة ⬆️ ثم «Add to Home Screen» وافتح التطبيق من الأيقونة وفعّل الإشعارات (iOS 16.4+).</p>
+        </section>
+
+        <section id="setup" class="card warn" hidden>
+          <h2>⚙️ لسه محتاج إعداد Firebase</h2>
+          <p>افتح <code>public/firebase-config.js</code> وحط بيانات مشروعك ومفتاح VAPID، وبعدين اعمل deploy من جديد.</p>
+        </section>
+
+        <section class="card status-card">
+          <div id="statusBadge" class="status waiting">
+            <i class="dot"></i>
+            <div><strong id="statusText">بيحمّل…</strong><small id="statusSub"></small></div>
+          </div>
+        </section>
+
+        <!-- موبايل الإشعار -->
+        <div class="phone" aria-hidden="true">
+          <div class="bar"><span id="pTime">9:41</span><span>●●● ▮</span></div>
+          <div class="date" id="pDate">Monday, Apr 28</div>
+          <div class="notif">
+            <svg class="notif-bot"><use href="#bot"/></svg>
+            <div><b>CinemaBot</b><span>now</span><p>🎬 Avengers: Doomsday<br />Tickets are now available!<br />Tap to book your seats.</p></div>
+          </div>
+        </div>
+
+        <section id="results" hidden>
+          <div class="sec-head">
+            <div>
+              <h2><svg class="ic gold"><use href="#i-star"/></svg> أفضل <span>٣</span> أماكن مقترحة لك</h2>
+              <p>مقاعد متجاورة · منظر متوازن للشاشة</p>
+            </div>
+            <button id="btnAck" class="btn small">✔️ تمام شفت</button>
+          </div>
+          <div id="tabs" class="tabs"></div>
+          <div id="shows"></div>
+        </section>
+
+        <section id="waitCard" class="card radar">
+          <div class="radar-ring"><i></i><i></i><i></i></div>
+          <div>
+            <h2>البوت واقف في الكمين 🎯</h2>
+            <p>بيفحص موقع جلاكسي طنطا كل شوية. أول ما الحجز يفتح هيرنّ عندك بصوت عالي ويجيبلك أحسن ٣ كراسي جنب بعض.</p>
+            <p class="mini" id="lastCheck"></p>
+          </div>
+        </section>
+      </div>
+
+      <div class="col">
+        <section class="card steps">
+          <h2><svg class="ic gear"><use href="#i-gear"/></svg> كيف يعمل البوت؟</h2>
+          <ol>
+            <li><span class="num">1</span><svg class="sic"><use href="#i-film"/></svg><div><b>أضف الفيلم</b><p>البوت بيفحص موقع جلاكسي طنطا ٢٤ ساعة لحد ما الحجز يفتح.</p></div></li>
+            <li><span class="num">2</span><svg class="sic"><use href="#i-bell"/></svg><div><b>استقبل الإشعار</b><p>عند توفر التذاكر هيجيلك إنذار عالي وإشعار بيتكرر لحد ما تدوس «تمام شفت».</p></div></li>
+            <li><span class="num">3</span><svg class="sic"><use href="#i-seat"/></svg><div><b>اختر أفضل مكان</b><p>بيقترح ٣ خيارات لأماكن متجاورة في نص القاعة ومن غير ما يسيب كرسي لوحده.</p></div></li>
+            <li><span class="num">4</span><svg class="sic"><use href="#i-ticket"/></svg><div><b>أكمل الحجز</b><p>دوس «احجز الآن» والبوت يحجز الكراسي ويقف عند صفحة الدفع.</p></div></li>
+          </ol>
+        </section>
+      </div>
+    </div>
+
+    <section class="features">
+      <div><svg class="fic"><use href="#i-shield"/></svg><span><b>حجز سريع وآمن</b><small>بياناتك في أمان</small></span></div>
+      <div><svg class="fic"><use href="#i-star"/></svg><span><b>أفضل المقاعد</b><small>بأعلى دقة</small></span></div>
+      <div><svg class="fic"><use href="#i-bell"/></svg><span><b>إشعارات فورية</b><small>لحظة توفر التذاكر</small></span></div>
+      <div><svg class="fic"><use href="#i-clock"/></svg><span><b>متابعة على مدار الساعة</b><small>حتى لو لسه الحجز مقفول</small></span></div>
+    </section>
+  </main>
+
+  <footer class="dock">
+    <svg class="dock-bot"><use href="#bot"/></svg>
+    <div class="dock-text"><b>CinemaBot</b><small>Ready when you are<span class="dots"><i></i><i></i><i></i></span></small></div>
+    <button id="btnTest" class="chip-btn"><span>جرّب صوت الإشعارات</span><svg class="ic play"><use href="#i-sound"/></svg></button>
+    <div class="wake"><span>سيب الشاشة صاحية</span><button id="btnWake" class="switch" role="switch" aria-checked="false"><i></i></button></div>
+  </footer>
+
+  <div id="alarm" class="alarm" hidden>
+    <div class="alarm-box">
+      <div class="siren">🚨</div>
+      <h2>الحجز فتح!</h2>
+      <p id="alarmText">افتح واحجز دلوقتي</p>
+      <button id="alarmStop" class="btn primary wide">اسكت الإنذار وورّيني الكراسي</button>
+    </div>
+  </div>
+  <div id="toast" class="toast" hidden></div>
+
+  <script>
+    (function () {
+      var d = new Date();
+      document.getElementById('pTime').textContent = d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: false });
+      document.getElementById('pDate').textContent = d.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' });
+      setTimeout(function () { document.getElementById('splash').classList.add('hide'); }, 1600);
+    })();
+  </script>
+  <script src="/firebase-config.js"></script>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
