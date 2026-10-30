@@ -20,7 +20,7 @@ jobs:
           node-version: 20
       - name: Install
         working-directory: checker
-        run: npm install --omit=optional --no-audit --no-fund
+        run: npm install --no-audit --no-fund
       - name: Check once
         working-directory: checker
         run: node index.js --once
